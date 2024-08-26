@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "demo-test-cicd"
+  links:
+    - title: Production
+      url: https://demo-test-cicd.glair.id
+    - title: Staging
+      url: https://demo-test-cicd-staging.glair.id
+    - title: Develop
+      url: https://demo-test-cicd-develop.glair.id
+  annotations:
+    google.com/cloudbuild-project-slug: 'intern-infra'
+    google.com/cloudbuild-repo-name: 'demo-test-cicd'
+    google.com/cloudbuild-location: 'asia-east1'
+spec:
+  type: service
+  owner: group:sre
+  lifecycle: experimental
